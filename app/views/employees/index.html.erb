@@ -1,37 +1,41 @@
 <div class='container-fluid'>
   <p id="notice"><%= notice %></p>
+  <div class='row'>
+    <div class='col-12 col-sm-8'>
+      <h1 class='text-center'>Employees</h1>
+      <table id='employee-table' class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Extension</th>
+            <th>Start date</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-  <h1 class='text-center'>Employees</h1>
+        <tbody>
+          <% @employees.each do |employee| %>
+            <tr>
+              <td><%= employee.name %></td>
+              <td><%= employee.position %></td>
+              <td><%= employee.office %></td>
+              <td><%= employee.extension %></td>
+              <td><%= employee.start_date %></td>
+              <td><%= link_to 'Show', employee %></td>
+              <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+              <td><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <br>
+    </div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Position</th>
-        <th>Office</th>
-        <th>Extension</th>
-        <th>Start date</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @employees.each do |employee| %>
-        <tr>
-          <td><%= employee.name %></td>
-          <td><%= employee.position %></td>
-          <td><%= employee.office %></td>
-          <td><%= employee.extension %></td>
-          <td><%= employee.start_date %></td>
-          <td><%= link_to 'Show', employee %></td>
-          <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-          <td><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'New Employee', new_employee_path, class: "btn btn-primary" %>
+    <div class='col-12 col-sm-4'>
+      <h1>New Employee</h1>
+      <%= render 'form', employee: @employee %>
+    </div>
+  </div>
 </div>
