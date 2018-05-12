@@ -13,30 +13,30 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :employee_name %>
+    <%= form.text_field :name, id: :employee_name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :position %>
-    <%= form.text_field :position, id: :employee_position %>
+    <%= form.text_field :position, id: :employee_position, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :office %>
-    <%= form.text_field :office, id: :employee_office %>
+    <%= form.select :office, [['Lagos', 'lagos'], ['New York', 'new york',], ['Lisbon', 'lisbon']], {}, { class: "form-control" } %>
   </div>
 
   <div class="field">
     <%= form.label :extension %>
-    <%= form.text_field :extension, id: :employee_extension %>
+    <%= form.text_field :extension, id: :employee_extension, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :start_date %>
-    <%= form.datetime_select :start_date, id: :employee_start_date %>
+    <%= form.date_field :start_date, id: :employee_start_date, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Create Employee', class: "btn btn-success" %>
   </div>
 <% end %>

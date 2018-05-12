@@ -1,29 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class='container-fluid'>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @employee.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @employee.name %>
+  </p>
 
-<p>
-  <strong>Position:</strong>
-  <%= @employee.position %>
-</p>
+  <p>
+    <strong>Position:</strong>
+    <%= @employee.position %>
+  </p>
 
-<p>
-  <strong>Office:</strong>
-  <%= @employee.office %>
-</p>
+  <p>
+    <strong>Office:</strong>
+    <%= @employee.office %>
+  </p>
 
-<p>
-  <strong>Extension:</strong>
-  <%= @employee.extension %>
-</p>
+  <p>
+    <strong>Extension:</strong>
+    <%= @employee.extension %>
+  </p>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @employee.start_date %>
-</p>
+  <p>
+    <strong>Start date:</strong>
+    <%= @employee.start_date %>
+  </p>
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+  <%= link_to 'Edit', edit_employee_path(@employee), class: "btn btn-primary" %>
+  <%= link_to 'Back', employees_path, class: "btn btn-link" %>
+</div>
+
