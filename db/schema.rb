@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20180512141903) do
     t.string "position"
     t.string "office"
     t.string "extension"
-    t.datetime "start_date"
+    t.date "start_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
