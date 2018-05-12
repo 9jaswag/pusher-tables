@@ -5,6 +5,7 @@ class EmployeesController < ApplicationController
   # GET /employees.json
   def index
     @employees = Employee.all
+    @employee = Employee.new
   end
 
   # GET /employees/1
@@ -30,6 +31,7 @@ class EmployeesController < ApplicationController
       if @employee.save
         format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
         format.json { render :show, status: :created, location: @employee }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @employee.errors, status: :unprocessable_entity }

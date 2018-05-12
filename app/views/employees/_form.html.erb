@@ -1,4 +1,4 @@
-<%= form_with(model: employee, local: true) do |form| %>
+<%= form_with(model: employee, remote: true, format: :js) do |form| %>
   <% if employee.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
