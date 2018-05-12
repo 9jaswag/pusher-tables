@@ -1,3 +1,10 @@
 // Place all the styles related to the employees controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+td a:hover {
+  background: none;
+}
+
+.btn:focus, .btn:active, .btn:visited {
+  color: white !important;
+}
