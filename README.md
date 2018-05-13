@@ -1,24 +1,28 @@
-# README
+Build a realtime table with Ruby and Pusher
+------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A tutorial to showcase realtime functionality of Pusher Channels in Ruby
 
-Things you may want to cover:
 
-* Ruby version
+Getting Started
+------
 
-* System dependencies
+#### Clone The Repository
+`$ git clone https://github.com/christiannwamba/pusher-table.git`
 
-* Configuration
 
-* Database creation
+#### Change directory
+`$ cd pusher-tables`
 
-* Database initialization
+#### Install dependencies
+`$ bundle install`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Prerequisites
+------
+A basic knowledge of Ruby and CoffeeScript
 
-* Deployment instructions
 
-* ...
+Built With
+------
+- [Pusher](https://pusher.com) - A Ruby gem to interact with the Pusher REST API
