@@ -2,17 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-# do ->
-#   Pusher.logToConsole = true
-#   pusher = new Pusher('9d1f66bd33f98722c319',
-#     cluster: 'eu'
-#     encrypted: true)
-#   channel = pusher.subscribe('my-channel')
-#   channel.bind 'my-event', (data) ->
-#     alert data.message
-#     return
-#   return
-
 updateTable = (data) ->
   $('#employee-table tbody').append """
     <tr>
@@ -30,6 +19,13 @@ updateTable = (data) ->
 
 $ ->
   $('#add_employee').on 'ajax:success', (data) ->
-    updateTable data.detail[0]
+    $('#add_employee')[0].reset()
+    return
+  pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>',
+    cluster: '<%= ENV["PUSHER_CLUSTER"] %>'
+    encrypted: true)
+  channel = pusher.subscribe('employee')
+  channel.bind 'new', (data) ->
+    updateTable data
     return
   return
