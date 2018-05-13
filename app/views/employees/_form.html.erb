@@ -1,4 +1,4 @@
-<%= form_with(model: employee, remote: true, format: :js) do |form| %>
+<%= form_with(model: employee, remote: true, format: :json, id: 'add_employee') do |form| %>
   <% if employee.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :office %>
-    <%= form.select :office, [['Lagos', 'lagos'], ['New York', 'new york',], ['Lisbon', 'lisbon']], {}, { class: "form-control" } %>
+    <%= form.select :office, [['Lagos', 'Lagos'], ['New York', 'New York',], ['Lisbon', 'Lisbon']], {}, { class: "form-control", id: "employee_office" } %>
   </div>
 
   <div class="field">
