@@ -8,7 +8,7 @@ Getting Started
 ------
 
 #### Clone The Repository
-`$ git clone https://github.com/christiannwamba/pusher-table.git`
+`$ git clone https://github.com/9jaswag/pusher-tables.git`
 
 
 #### Change directory
