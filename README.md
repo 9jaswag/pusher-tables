@@ -3,6 +3,8 @@ Build a realtime table with Ruby and Pusher
 
 A tutorial to showcase realtime functionality of Pusher Channels in Ruby
 
+[View tutorial](https://pusher.com/tutorials/realtime-table-ruby-rails)
+
 
 Getting Started
 ------
